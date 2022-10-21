@@ -9,7 +9,7 @@ import numpy as np
 @api_view(['GET'])
 def calcnormal(request, format=None):
     """API to process long running application"""
-    result = multi(100000,100000,1000)
+    result = multi(100,100,10)
     return Response(result, status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
@@ -35,5 +35,5 @@ def multi(row1, row2, col):
     df_mean = result.mean()
     lst = df_mean.tolist()
     res_dict["Result"] = lst
-    sleep(20)
+    # sleep(20)
     return res_dict
