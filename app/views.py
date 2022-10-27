@@ -35,5 +35,6 @@ def multi(row1, row2, col):
     df_mean = result.mean()
     lst = df_mean.tolist()
     res_dict["Result"] = lst
-    # sleep(20)
+    sleep(20)
+    
     return res_dict
