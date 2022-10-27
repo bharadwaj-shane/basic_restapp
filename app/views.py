@@ -9,7 +9,7 @@ import numpy as np
 @api_view(['GET'])
 def calcnormal(request, format=None):
     """API to process long running application"""
-    result = multi(100,100,10)
+    result = multi(10000,10000,1000)
     return Response(result, status=status.HTTP_201_CREATED)
 
 @api_view(['POST'])
